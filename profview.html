@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skype Booking Widget - Professor View</title>
+    <link rel="stylesheet" href="widget.css">
+    <link rel="stylesheet" href="profview.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="profview.js"></script>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">View your bookings</a></li>
+        <li><a href="#tabs-2">Update your availability</a></li>
+    </ul>
+    <div class="tab" id="tabs-1">
+        <div>
+            <p class="tableInfo">The cancel symbol right of each row will cancel a booking and
+                <br> remove this time from your availailability, whilst clicking the recycle symbol
+                <br> will cancel the appointment but allow the slot to be reallocated to another student.</p>
+        </div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                <tr>
+                    <td>Date: </td>
+                    <td>Time: </td>
+                    <td>Name: </td>
+                    <td>Skype: </td>
+                    <td>Email: </td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody id='bookingsTbody'>
+                </tbody>
+            </table>
+        </div>
+        <div id="eotOne" class="endOfTable" ></div>
+    </div>
+    <div class="tab" id="tabs-2">
+        <div>
+            <p class="tableInfo">Click on a row to edit it,
+                <br> Press + and x repsectively to cancel or create new slots
+                <br> After you have finished editing, press save to save the changes. </p>
+        </div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                <tr>
+                    <td>Date: </td>
+                    <td>Time: </td>
+                    <td></td>
+                    <td id="newRowBt" class="plus mini-icon">&plus;</td>
+                    <td id='savebt' class="mini-icon">&#128190;</td>
+                </tr>
+                </thead>
+                <tbody id='availibilityTbody'>
+                </tbody>
+            </table>
+        </div>
+        <div id="eotTwo" class="endOfTable" ></div>
+    </div>
+    </div>
+<div id="dialog">
+    <p>Optionally, enter additional comments here which will be emailed to the student when they are notified of this cancellation'</p>
+    <textarea id="emailComments" rows="10" cols="30">
+    </textarea>
+    <br>
+    <button id='crbt' style='margin-top:10px;' class="bt">&#8680;</button>
+</div>
+<iframe src="" id="hiddenFrame" name="hiddenFrame"></iframe>
+<iframe src="" id="hiddenFrameTwo" name="hiddenFrameTwo"></iframe>
+</body>
+</html>
+

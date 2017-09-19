@@ -1,0 +1,131 @@
+  #tabs { width:670px;
+          height: 500px;
+          padding-bottom:20px; }
+
+
+    #menu {
+          overflow-y: scroll;
+          overflow-x: hidden;
+          height: 350px;
+          width: 150px;
+          display:inline-block;
+          float:left;
+          margin-right:20px;
+        }
+
+   .bt { background-color:rgb(220,220,220);
+         color:#333;
+         border:none;border-radius:5px;padding:10px;
+         color:#111;
+         border:none;
+         text-style:bold;
+         font-family:Arial, serif;
+         font-size:18px; }
+
+
+  .above-tabs {font-style:Bold;
+               font-size:20px;
+               border-bottom: 2px solid rgb(220,220,220); }
+
+  .icon { padding:8px 15px;
+          margin-right:5px;
+          font-size:25px;
+          text-decoration:none; }
+
+   .plus {color:#191 !important;
+          font-size:30px; }
+
+   .cancel {color: #900 !important; }
+
+   .refresh {color:#666 !important; }
+
+   .mini-icon:hover { color:#009 !important;  }
+
+   .tab,tbody { overflow:scroll;}
+
+
+    tbody {height:100px;}
+
+   .bt:hover { background-color:#999;color:#111;border:none; }
+
+
+   .form-section { margin-bottom:20px; }
+
+   .form-section > p { border-bottom: 1px solid black;
+                      color:#888;
+                      width:280px;
+                      text-style:bold;
+                      font-family:Arial, serif;
+                      font-size:15px; }
+
+   #chosen-date { margin-top:30px; }
+
+   .form-progress * {display:inline-block; }
+
+   .form-progress-section {margin-left:10px;margin-right:10px;}
+
+   .error-message { color:#b43214;
+                    margin-bottom:10px;
+                    font-size:15px;
+                    animation: blinker 1s linear;
+                    font-style:bold; }
+
+   .error-message:before { content:'\26D4    ' }
+
+
+   .error-box { height:100px;
+                width:300px;
+                float:right }
+
+
+  input::placeholder { color: rgb(200,200,200);
+                       font-style:italic;
+                       font-size:12px;  }
+
+
+   .confirmation-section p { font-family:Arial,serif;
+                             font-size:15px;
+                             color:#999;
+                             font-style:bold;}
+
+   .confirmation-section * { display:inline-block; }
+
+   #confirm-link  { color:rgb(220,10,35);
+                    font-weight:bold;
+                    font-family:Arial,serif;
+                    font-size:15px; }
+
+   #confirm-link:after { content: ' \279C' }
+
+   #final-confirm {  margin-left:150px;float:right; }
+
+   #confirm-link:hover { color: rgb(70,220,30); }
+
+   #confirm { font-family:Arial,serif;
+              font-size:25px;
+              font-style:bold;
+              margin-bottom:10px;
+              border-bottom:1px solid black; }
+
+   .confirmation-header { font-family:Arial,serif;
+                          font-size:20px;
+                          color:#666;
+                          font-style:bold;
+                          margin-right:10px; }
+
+   #hiddenFrame,#hiddenFrameTwo { display:none;
+                                  height:0px;
+                                  width:0px; }
+
+
+  .tableInfo { text-align:center; }
+
+  .ui-datepicker .ui-datepicker-unselectable .ui-state-default { background:red;color:red;}
+
+  .ui-datepicker .ui-state-hover { background:rgb(180,180,180) ; color:rgb(50,150,50) ; }
+
+   #time-select { width:250px;margin-bottom:10px; }
+
+   @keyframes blinker {  50% { opacity: 0; } }
+
+

@@ -1,0 +1,39 @@
+thead  td { font-famiy: Arial,serif;
+              font-size: 20px;
+              font-weight:bold;
+              border-bottom: 1px solid grey;   }
+
+
+  td {width:150px;
+      text-align:center;}
+
+  table {
+      border-collapse: separate;
+      border-spacing: 0px;
+      *border-collapse: expression('separate', cellSpacing = '0px');
+  }
+
+  tbody * { font-famiy: Arial,serif;
+            font-size: 15px;
+            font-weight:bold; }
+
+  .endOfTable {text-align:center;
+                  padding-bottom:10px;
+                  color: #900;}
+
+  tbody tr:nth-child(odd) { background-color:rgb(240,240,240) }
+
+  tr.green { background-color: rgba(0, 255, 0, 0.3) !important; }
+
+  input { border:none;
+          text-align:center;
+          width:90%;
+          background-color: inherit}
+
+  input:focus {background-color:rgb(250,250,250); }
+
+  .material-icons {padding-top:13px;}
+
+  .tableContainer { height:330px;
+                    overflow:scroll;
+                    margin-bottom: 10px;}

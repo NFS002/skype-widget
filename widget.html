@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skype Booking Widget - Student View</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="widget.css">
+    <script src="d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="widget.js"></script>
+</head>
+<body>
+<div  id="tabs">
+    <div class="above-tabs">Office hours booking form: </div>
+    <div class="form-progress">
+        <div class="form-progress-section">
+            <img id="skype-progress-icon" width="20px" src="cross.svg">
+            <p>Skype / Contact Details</p>
+        </div>
+        <div class="form-progress-section">
+            <img id="date-progress-icon" width="20px" src="cross.svg">
+            <p>Date Selected</p>
+        </div>
+        <div class="form-progress-section">
+            <img id="time-progress-icon" width="20px" src="cross.svg">
+            <p>Time Selected</p>
+        </div>
+        <div class="form-progress-section">
+            <img id="confirm-progress-icon" width="20px" src="cross.svg">
+            <p>Confirmed</p>
+        </div>
+    </div>
+    <ul>
+        <li><a href="#tabs-1">Skype / contact details</a></li>
+        <li><a href="#tabs-2">Choose a Date and time</a></li>
+        <li><a href="#tabs-3">Confirm selections</a></li>
+    </ul>
+    <div id="tabs-1">
+        <div id="tab-1-error-box" class="error-box"></div>
+            <div class="form-section">
+                    <p>Skype Address: </p>
+                    <input placeholder='e.g. j.smith55' id ="skype-input" type="text">
+                </div>
+                <div class="form-section">
+                     <p>Name: </p>
+                    <input placeholder="e.g. John Smith" id ="name-input" type="text">
+                </div>
+                <div class="form-section">
+                    <p>Phone number: </p>
+                    <input placeholder="e.g. +440123456789" id ="phone-input" type="text">
+                </div>
+                <div class="form-section">
+                    <p>Email: </p>
+                    <input placeholder="e.g. j.s@gmail.com" id ="email-input" type="text">
+                </div>
+                <button id="skypebt" class="bt">Submit</button>
+    </div>
+    <div class="tab" id="tabs-2">
+        <div id="date-picker-container" >
+            <div id="datepicker"></div>
+            <p id="chosen-date" >
+        </div>
+        <div  id="time-picker-container">
+            <p>Once you have chosen your date
+                <br> please choose a time. </p>
+            <select id="time-select"></select>
+        </div>
+        <button id="timebt" class="bt">Submit</button>
+    </div>
+    <div class="tab" id="tabs-3">
+        <div id="confirm">Confirm your selections:</div>
+        <form action="confirmscript.py">
+            <div class="confirmation-section">
+                <h4 class="confirmation-header">Skype: </h4>
+                <p id="skype-address"></p>
+                <div style="margin-left:200px;">
+                    <h4 class="confirmation-header">Time: </h4>
+                    <p id="time"></p>
+                </div>
+            </div>
+            <div class="confirmation-section">
+                <h4 class="confirmation-header">Name: </h4>
+                <p id="name"></p>
+                <div style="margin-left:200px;">
+                    <h4 class="confirmation-header">Email: </h4>
+                    <p id="email"></p>
+                </div>
+            </div>
+            <div class="confirmation-section">
+                <h4 class="confirmation-header">Phone Number: </h4>
+                <p id="phone-number"></p>
+            </div>
+            <div class="confirmation-section">
+                <h4 class="confirmation-header">Date: </h4>
+                <p id="date"></p>
+                <div id="final-confirm">
+                    <img width="40px" src="confirm.png">
+                    <p id="confirm-link">
+                        If you are happy with your selections,
+                        <br> click here to submit them.
+                    </p>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+<iframe src="" id="hiddenFrame" name="hiddenFrame"></iframe>
+</body>
+</html>
